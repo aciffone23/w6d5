@@ -1,0 +1,19 @@
+
+<table>
+    <thead>
+        <tr>
+            <th> All cats </th>
+        </tr>
+    </thead>
+    <tbody> 
+        <% @cats.each do |cat| %>
+            <tr> 
+                <td><%= cat.name %> </td>
+                <td><%= cat.color %> </td>
+                <td><%= cat.sex %> </td>
+                <td><%= cat.birth_date %> </td>
+                <td><%= cat.description %> </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
