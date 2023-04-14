@@ -5,15 +5,11 @@
             <th> All cats </th>
         </tr>
     </thead>
-    <tbody> 
-        <% @cats.each do |cat| %>
-            <tr> 
-                <td><%= cat.name %> </td>
-                <td><%= cat.color %> </td>
-                <td><%= cat.sex %> </td>
-                <td><%= cat.birth_date %> </td>
-                <td><%= cat.description %> </td>
-            </tr>
-        <% end %>
-    </tbody>
+
+		<tbody> 
+			<% @cats.each do |cat| %>
+				<%= render "cat", cat: cat, type: :index %>
+			<% end %>
+		</tbody>
+
 </table>
